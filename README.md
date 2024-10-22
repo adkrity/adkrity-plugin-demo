@@ -93,12 +93,10 @@
    In your ExistingActivity.kt, setOnClickListener :
    ```
    myButton.setOnClickListener {
-     startActivity(
-       FlutterActivity
-         .withNewEngine()
-         .initialRoute("adkrity/$YourMobileNo")
-         .build(this)
-        )
+      startActivity(
+          FlutterActivity
+              .withCachedEngine("my_engine_id")
+              .build(this)
       }
    ```
    
