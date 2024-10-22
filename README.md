@@ -71,17 +71,17 @@
    super.onCreate()
 
     // Instantiate a FlutterEngine.
-    flutterEngine = FlutterEngine(this)
+        flutterEngine = FlutterEngine(this)
+   // Start executing Dart code to pre-warm the FlutterEngine.
+   flutterEngine.navigationChannel.setInitialRoute("adkrity/$AkUserMobileNumber");
+   flutterEngine.dartExecutor.executeDartEntrypoint(
+   DartExecutor.DartEntrypoint.createDefault()
+   )
 
-    // Start executing Dart code to pre-warm the FlutterEngine.
-    flutterEngine.dartExecutor.executeDartEntrypoint(
-      DartExecutor.DartEntrypoint.createDefault()
-    )
-
-    // Cache the FlutterEngine to be used by FlutterActivity.
-    FlutterEngineCache
-      .getInstance()
-      .put("my_engine_id", flutterEngine)
+        // Cache the FlutterEngine to be used by FlutterActivity.
+        FlutterEngineCache
+            .getInstance()
+            .put("my_engine_id", flutterEngine)
    }
    }
    ```
