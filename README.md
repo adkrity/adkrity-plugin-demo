@@ -62,8 +62,12 @@
 
    Find a reasonable location in your app to instantiate a FlutterEngine. The following example arbitrarily pre-warms a FlutterEngine in the Application class:
    ```
-   import io.flutter.embedding.android.FlutterActivity;
-   
+   import io.flutter.embedding.android.FlutterActivity
+   import io.flutter.embedding.engine.FlutterEngine
+   import io.flutter.embedding.engine.FlutterEngineCache
+   import io.flutter.embedding.engine.dart.DartExecutor
+
+
    class MyApplication : Application() {
    lateinit var flutterEngine : FlutterEngine
 
