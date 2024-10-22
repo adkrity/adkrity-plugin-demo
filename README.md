@@ -1,0 +1,1 @@
+# adkrity-plugin-demo
