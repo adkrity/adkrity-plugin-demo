@@ -103,6 +103,25 @@
               .build(this)
       }
    ```
+
+   3. For Facebook Integration
+      - In your _/app/src/main/res/xml/strings.xml_
+        ...
+            <string name="facebook_app_id">282583907002622</string>
+    <string name="fb_login_protocol_scheme">fb282583907002622</string>
+    <string name="facebook_client_token">46c928df06a9f9aa689ba225b0140169</string>
+        ...
+
+      - In your _/app/src/main/AndroidManifest.xml_
+        ...
+        <!-- Facebook Login configuration -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token"/>
+        ...
    
    
    
